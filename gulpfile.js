@@ -32,7 +32,7 @@ gulp.task('sass', function () {
  * Compile files from js
  */
 gulp.task('scripts', function() {
-  return gulp.src(['js/*.js', 'js/scripts.js'])
+  return gulp.src(['js/*.js', 'js/custom.js'])
   .pipe(concat('scripts.js'))
   .pipe(gulp.dest('./'))
   .pipe(browserSync.reload({stream:true}))
