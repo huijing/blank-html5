@@ -9,7 +9,7 @@
   "author": "Chen Hui Jing <kakyou_tensai@yahoo.com>",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.11.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-concat": "^2.6.0",
