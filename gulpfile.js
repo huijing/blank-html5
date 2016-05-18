@@ -2,7 +2,9 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
+var cssnano     = require('gulp-cssnano');
 var concat      = require('gulp-concat');
+var uglify      = require('gulp-uglify');
 
 /**
  * Launch the Server
@@ -28,12 +30,32 @@ gulp.task('sass', function () {
   .pipe(browserSync.reload({stream:true}))
 });
 
+gulp.task('sass-prod', function () {
+  return gulp.src('scss/styles.scss')
+  .pipe(sass({
+    includePaths: ['scss'],
+    onError: browserSync.notify
+  }))
+  .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+  .pipe(cssnano())
+  .pipe(gulp.dest('./'))
+  .pipe(browserSync.reload({stream:true}))
+});
+
 /**
  * Compile files from js
  */
 gulp.task('scripts', function() {
   return gulp.src(['js/*.js', 'js/custom.js'])
   .pipe(concat('scripts.js'))
+  .pipe(gulp.dest('./'))
+  .pipe(browserSync.reload({stream:true}))
+});
+
+gulp.task('scripts-prod', function() {
+  return gulp.src(['js/*.js', 'js/custom.js'])
+  .pipe(concat('scripts.js'))
+  .pipe(uglify())
   .pipe(gulp.dest('./'))
   .pipe(browserSync.reload({stream:true}))
 });
@@ -61,3 +83,4 @@ gulp.task('watch', function () {
  * compile the scripts, launch BrowserSync & watch files.
  */
 gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('build', ['sass-prod', 'scripts-prod']);
