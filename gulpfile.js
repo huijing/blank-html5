@@ -5,6 +5,7 @@ var prefix      = require('gulp-autoprefixer');
 var cssnano     = require('gulp-cssnano');
 var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
+var babel       = require('gulp-babel');
 
 /**
  * Launch the Server
@@ -47,6 +48,9 @@ gulp.task('sass-prod', function () {
  */
 gulp.task('scripts', function() {
   return gulp.src(['js/*.js', 'js/custom.js'])
+  .pipe(babel({
+    presets: ['es2015']
+  }))
   .pipe(concat('scripts.js'))
   .pipe(gulp.dest('./'))
   .pipe(browserSync.reload({stream:true}))
@@ -54,6 +58,9 @@ gulp.task('scripts', function() {
 
 gulp.task('scripts-prod', function() {
   return gulp.src(['js/*.js', 'js/custom.js'])
+  .pipe(babel({
+    presets: ['es2015']
+  }))
   .pipe(concat('scripts.js'))
   .pipe(uglify())
   .pipe(gulp.dest('./'))
