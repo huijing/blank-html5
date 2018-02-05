@@ -59,7 +59,7 @@ gulp.task('scripts', function() {
 gulp.task('scripts-prod', function() {
   return gulp.src(['js/*.js', 'js/custom.js'])
   .pipe(babel({
-    presets: ['es2015']
+    presets: ['env']
   }))
   .pipe(concat('scripts.js'))
   .pipe(uglify())
