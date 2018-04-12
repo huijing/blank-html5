@@ -1,1 +1,12 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
