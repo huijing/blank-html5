@@ -36,7 +36,7 @@ const compileStyles = () => {
     includePaths: ['scss'],
     onError: browserSync.notify
   }))
-  .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+  .pipe(prefix(['last 3 versions'], { cascade: true }))
   .pipe(gulp.dest('./'))
   .pipe(browserSync.reload({ stream:true }))
 }
