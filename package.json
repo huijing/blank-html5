@@ -9,10 +9,10 @@
   "author": "Chen Hui Jing <kakyou_tensai@yahoo.com>",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.10.4",
+    "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
-    "@babel/register": "^7.10.4",
-    "browser-sync": "^2.26.7",
+    "@babel/register": "^7.10.5",
+    "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
