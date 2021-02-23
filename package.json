@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Chen Hui Jing <kakyou_tensai@yahoo.com>",
+  "author": "Chen Hui Jing",
   "license": "ISC",
   "devDependencies": {
     "@selfisekai/gulp-sass": "^4.2.0",
