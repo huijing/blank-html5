@@ -9,9 +9,9 @@
   "author": "Chen Hui Jing",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
-    "@babel/register": "^7.21.0",
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/register": "^7.22.5",
     "@selfisekai/gulp-sass": "^4.2.0",
     "autoprefixer": "^10.4.14",
     "browser-sync": "^2.29.3",
@@ -21,8 +21,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^9.0.1",
     "gulp-uglify": "^3.0.2",
-    "postcss": "^8.4.23",
-    "sass": "^1.62.1"
+    "postcss": "^8.4.24",
+    "sass": "^1.63.5"
   },
   "babel": {
     "presets": [
