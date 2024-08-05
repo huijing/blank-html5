@@ -25,7 +25,7 @@ const browserSyncReload = (done) => {
 
 const compileScripts = () => {
   return gulp
-    .src(["js/*.js", "js/custom.js"], { allowEmpty: true })
+    .src("js/custom.js")
     .pipe(
       babel({
         presets: ["@babel/preset-env"],
