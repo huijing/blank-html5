@@ -3,7 +3,7 @@
 1. Clone this repo to your local computer:
 
 ```shell
-$git clone git@github.com:huijing/blank-html5.git
+$ git clone git@github.com:huijing/blank-html5.git
 ```
 
 2. Install the necessary packages for this repo:
