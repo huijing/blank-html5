@@ -21,8 +21,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-postcss": "^10.0.0",
     "gulp-uglify": "^3.0.2",
-    "postcss": "^8.4.47",
-    "sass": "^1.80.6"
+    "postcss": "^8.4.49",
+    "sass": "^1.83.0"
   },
   "babel": {
     "presets": [
